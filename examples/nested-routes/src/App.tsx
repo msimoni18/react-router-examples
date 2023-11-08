@@ -11,6 +11,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/route1" replace />} />
         <Route path="route1" element={<Route1 />}>
+          <Route index element={<Navigate to="/route1/a" replace />} />
           <Route path="a" element={<CompA />} />
           <Route path="b" element={<CompB />} />
         </Route>
